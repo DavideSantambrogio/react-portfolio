@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar';
 import Jumbo from './components/Jumbo';
+import Force from './components/Force';
 import { GlobalProvider } from './GlobalProvider';
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <GlobalProvider>
       <div>
         <Navbar />
-        <Jumbo />
+        <Jumbo /> 
+        <Force/>
       </div>
     </GlobalProvider>
   );
