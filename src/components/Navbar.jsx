@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <>
 
-            <nav className="navbar navbar-expand-lg fixed-top bg-primary  " data-bs-theme="dark">
+            <nav className="navbar navbar-expand-lg fixed-top pt-4 pb-3  " data-bs-theme="dark">
                 <div className="container ">
                     <h3  className="text-light" href="#">Portfolio</h3>
                     
