@@ -1,23 +1,24 @@
+import React, { useEffect } from 'react'; // Import useEffect
+import { useGlobalContext } from '../GlobalProvider';
+import styles from './style/Slider.module.css'; // Import the CSS module
 
-function Technologies() {
+const LogosSlider = () => {
+    const { technologies } = useGlobalContext();
 
+    useEffect(() => {
+        const copy = document.querySelector(`.${styles.logosSlide}`).cloneNode(true);
+        document.querySelector(`.${styles.logos}`).appendChild(copy);
+    }, []);
 
     return (
-        <>
-            <div className="my-bg-primary">
-                <div className="container pb-5 pt-5 ">
-                    <p className="fs-4 mb-5 my-text-color">
-                        TECNOLOGIE UTILIZZATE
-                    </p>
-
-
-                </div>
+        <div className={styles.logos}>
+            <div className={styles.logosSlide}>
+                {technologies.map((tech, index) => (
+                    <img key={index} src={`src/assets/img/technologies/${tech.image}`} alt={tech.name} className={styles.logosImage} />
+                ))}
             </div>
+        </div>
+    );
+};
 
-
-
-        </>
-    )
-}
-
-export default Technologies
+export default LogosSlider;

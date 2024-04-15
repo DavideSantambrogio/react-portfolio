@@ -28,7 +28,7 @@ function Jumbo() {
 
                         </div>
                         <div className='col-6' >
-                           {/* <img src="src\assets\file__1_-removebg-preview.png" alt="" />  */}
+                            <img src="src\assets\img\file__1_-removebg-preview.png" alt="" />  
 
                         </div>
                     </div>
