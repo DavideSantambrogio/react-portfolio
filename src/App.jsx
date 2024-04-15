@@ -4,7 +4,9 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Jumbo from './components/Jumbo';
 import Force from './components/Force';
+import Technologies from './components/Technologies';
 import { GlobalProvider } from './GlobalProvider';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         <Navbar />
         <Jumbo /> 
         <Force/>
+        <Technologies/>
       </div>
     </GlobalProvider>
   );

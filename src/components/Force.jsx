@@ -4,7 +4,7 @@ function Force() {
 
     return (
         <>
-            <div className="my-bg-cecondary">
+            <div className="my-bg-secondary">
                 <div className="container pb-5 pt-5 ">
                     <p className="fs-4 mb-5 my-text-color">
                         I MIEI PUNTI DI FORZA
@@ -31,7 +31,7 @@ function Force() {
                                 COLLABORAZIONE
                             </p>
                             <p>
-                            Nel contesto dello sviluppo web, essere collaborativi significa avere la capacità di lavorare efficacemente in squadra, ascoltando attivamente le idee degli altri membri e contribuendo con le proprie competenze per il successo del progetto.  Sono aperto al feedback e alla condivisione delle conoscenze, e mi impegno a mantenere una comunicazione chiara e trasparente con i colleghi. 
+                            Nel contesto dello sviluppo web, essere collaborativi significa avere la capacità di lavorare efficacemente in squadra, ascoltando attivamente le idee degli altri membri e contribuendo con le proprie competenze per il successo del progetto.  Sono aperto al feedback e alla condivisione delle conoscenze, e mi impegno a mantenere una comunicazione chiara e trasparente. 
                             </p>
                         </div>
                     </div>
