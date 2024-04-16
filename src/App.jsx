@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Jumbo from './components/Jumbo';
 import Force from './components/Force';
 import Technologies from './components/Technologies';
+import Presentation from './components/Presentation';
 import { GlobalProvider } from './GlobalProvider';
 
 
@@ -15,6 +16,7 @@ function App() {
         <Navbar />
         <Jumbo /> 
         <Force/>
+        <Presentation/>
         <Technologies/>
       </div>
     </GlobalProvider>

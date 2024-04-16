@@ -11,13 +11,23 @@ const LogosSlider = () => {
     }, []);
 
     return (
-        <div className={styles.logos}>
-            <div className={styles.logosSlide}>
-                {technologies.map((tech, index) => (
-                    <img key={index} src={`src/assets/img/technologies/${tech.image}`} alt={tech.name} className={styles.logosImage} />
-                ))}
+        <div className="my-bg-secondary">            
+            <div className="pb-5 pt-5">
+            <h4 className='my-text-color text-center'>TECNOLOGIE UTILIZZATE</h4>
+                <div className={styles.logos}>
+                    <div className={styles.logosSlide}>
+                        {technologies.map((tech, index) => (
+                            <img key={index} src={`src/assets/img/technologies/${tech.image}`} alt={tech.name} className={styles.logosImage} />
+                        ))}
+                    </div>
+                </div>
+
             </div>
+
+
         </div>
+
+        
     );
 };
 
