@@ -6,7 +6,9 @@ import Jumbo from './components/Jumbo';
 import Force from './components/Force';
 import Technologies from './components/Technologies';
 import Presentation from './components/Presentation';
+import Experiences from './components/Experiences';
 import { GlobalProvider } from './GlobalProvider';
+
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
         <Force/>
         <Presentation/>
         <Technologies/>
+        <Experiences/>
       </div>
     </GlobalProvider>
   );
