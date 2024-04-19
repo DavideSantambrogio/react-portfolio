@@ -106,88 +106,7 @@ export const GlobalProvider = ({ children }) => {
     }
   }, [githubRepos]);
 
-  const projectInfo = {
-    'react-portfolio': {
-      image: '/path/to/images/react-portfolio-image.png',
-      description: 'Descrizione per react-portfolio'
-    },
-    'Devvery-front-office': {
-      image: '/path/to/images/Devvery-front-office-image.png',
-      description: 'Descrizione per Devvery-front-office'
-    },
-    'Devvery-back-office': {
-      image: '/path/to/images/Devvery-back-office-image.png',
-      description: 'Descrizione per Devvery-back-office'
-    },
-    'js-Gioco-dei-dadi': {
-      image: '/path/to/images/js-Gioco-dei-dadi-image.png',
-      description: 'Descrizione per js-Gioco-dei-dadi'
-    },
-    'DavideSantambrogio': {
-      image: '/path/to/images/DavideSantambrogio-image.png',
-      description: 'Descrizione per DavideSantambrogio'
-    },
-    'laravel-dc-comics': {
-      image: '/path/to/images/laravel-dc-comics-image.png',
-      description: 'Descrizione per laravel-dc-comics'
-    },
-    'php-dischi-json': {
-      image: '/path/to/images/php-dischi-json-image.png',
-      description: 'Descrizione per php-dischi-json'
-    },
-    'php-badwords': {
-      image: '/path/to/images/php-badwords-image.png',
-      description: 'Descrizione per php-badwords'
-    },
-    'proj-html-vuejs': {
-      image: '/path/to/images/proj-html-vuejs-image.png',
-      description: 'Descrizione per proj-html-vuejs'
-    },
-    'vite-boolflix': {
-      image: '/path/to/images/vite-boolflix-image.png',
-      description: 'Descrizione per vite-boolflix'
-    },
-    'vite-yu-gi-oh': {
-      image: '/path/to/images/vite-yu-gi-oh-image.png',
-      description: 'Descrizione per vite-yu-gi-oh'
-    },
-    'vite-comics': {
-      image: '/path/to/images/vite-comics-image.png',
-      description: 'Descrizione per vite-comics'
-    },
-    'vue-boolzapp': {
-      image: '/path/to/images/vue-boolzapp-image.png',
-      description: 'Descrizione per vue-boolzapp'
-    },
-    'js-campominato-dom': {
-      image: '/path/to/images/js-campominato-dom-image.png',
-      description: 'Descrizione per js-campominato-dom'
-    },
-    'js-fizzbuzz': {
-      image: '/path/to/images/js-fizzbuzz-image.png',
-      description: 'Descrizione per js-fizzbuzz'
-    },
-    'js-biglietto-treno-form': {
-      image: '/path/to/images/js-biglietto-treno-form-image.png',
-      description: 'Descrizione per js-biglietto-treno-form'
-    },
-    'htmlcss-responsive-layout': {
-      image: '/path/to/images/htmlcss-responsive-layout-image.png',
-      description: 'Descrizione per htmlcss-responsive-layout'
-    },
-    'htmlcss-dropbox': {
-      image: '/path/to/images/htmlcss-dropbox-image.png',
-      description: 'Descrizione per htmlcss-dropbox'
-    },
-    'htmlcss-discord': {
-      image: '/path/to/images/htmlcss-discord-image.png',
-      description: 'Descrizione per htmlcss-discord'
-    },
-    'Coding-Challenge': {
-      image: '/path/to/images/Coding-Challenge-image.png',
-      description: 'Descrizione per Coding-Challenge'
-    }
-  };
+ 
   
 
   if (loading) {
@@ -199,7 +118,7 @@ export const GlobalProvider = ({ children }) => {
   }
 
   return (
-    <GlobalContext.Provider value={{ technologies, githubRepos, projectInfo }}>
+    <GlobalContext.Provider value={{ technologies, githubRepos }}>
       {children}
     </GlobalContext.Provider>
   );
