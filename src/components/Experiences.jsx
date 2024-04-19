@@ -12,7 +12,6 @@ function Experiences() {
                         <div className="col-6">
                             <h5>FORMAZIONE</h5>
                             <h1>WIP</h1>
-
                         </div>
                         <div className="col-6">
                             <h5>ESPERIENZE</h5>
@@ -20,8 +19,6 @@ function Experiences() {
                         </div>
                     </div> 
                 </div>
-
-
             </div>
         </>
     );

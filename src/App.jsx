@@ -7,6 +7,7 @@ import Force from './components/Force';
 import Technologies from './components/Technologies';
 import Presentation from './components/Presentation';
 import Experiences from './components/Experiences';
+import Projects from './components/Projects';
 import { GlobalProvider } from './GlobalProvider';
 
 
@@ -21,6 +22,7 @@ function App() {
         <Presentation/>
         <Technologies/>
         <Experiences/>
+        <Projects/>
       </div>
     </GlobalProvider>
   );
