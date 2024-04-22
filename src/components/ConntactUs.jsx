@@ -7,8 +7,18 @@ export const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const userData = {
+      user_name: e.target.user_name.value,
+      user_surname: e.target.user_surname.value,
+      user_email: e.target.user_email.value,
+      message: e.target.message.value,
+    };
+
     emailjs
       .sendForm('service_hjqvpar', 'template_479sfav', form.current, 'JvfR3cfQwEgjSgCc2')
+      .then(() => {
+        return emailjs.send('service_hjqvpar', 'template_u06i0pq', userData, 'JvfR3cfQwEgjSgCc2');
+      })
       .then(
         (result) => {
           console.log('Email inviata con successo:', result.text);
@@ -67,4 +77,5 @@ export const ContactUs = () => {
     </div>
   );
 };
+
 export default ContactUs;
