@@ -37,7 +37,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className="my-bg-primary">
+    <div id='contactUs' className="my-bg-primary">
       <div className="container pb-5 pt-5">
         <div className="row">
           <div className="col-5 my-bg-secondary p-5 text-white">

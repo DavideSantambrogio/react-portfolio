@@ -1,6 +1,7 @@
 import React from 'react';
 import { useGlobalContext } from '../GlobalProvider';
 import ProjectsCard from './ProjectsCard';
+import { Link } from 'react-router-dom';
 
 function Projects() {
   const { githubRepos } = useGlobalContext();
@@ -32,7 +33,7 @@ function Projects() {
           ))}
         </div>
         <div className="text-center">
-            <div className="btn btn-secondary">Mostra tutti</div>
+            <Link to={'/projects'} className="btn btn-secondary">Mostra tutti</Link>
         </div>
         
       </div>

@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGlobalContext } from '../GlobalProvider';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProjectsCard from '../components/ProjectsCard';
+
 
 function ProjectsPage() {
     const { githubRepos } = useGlobalContext();
@@ -15,6 +16,11 @@ function ProjectsPage() {
 
     // Ordina l'array filteredRepos in modo decrescente in base all'ID
     const sortedRepos = [...filteredRepos].sort((a, b) => b.id - a.id);
+
+    useEffect(() => {
+        // Imposta la posizione dello scroll all'inizio della pagina quando la pagina viene caricata
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>

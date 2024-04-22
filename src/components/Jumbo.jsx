@@ -13,7 +13,7 @@ function Jumbo() {
                             <h2>Ciao sono</h2>
                             <p className=" fs-1">Davide Santambrogio</p>
                             <h4 className="p-2">Full stack Web developer</h4>
-                            <button type="button" className="btn btn-secondary mt-3 px-5 py-2">Contattami</button>
+                            <a type="button" href='#contactUs' className="btn btn-secondary mt-3 px-5 py-2">Contattami</a>
                             <div className="row pt-5 justify-content-around">
                                 <div className="col-3 text-center">
                                     <strong className='my-text-color fs-1'>{technologies.length}</strong>

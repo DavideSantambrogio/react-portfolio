@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faSquareGithub } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -26,9 +27,10 @@ function Footer() {
                     <div className="col-4">
                         <h5 className='pb-2'>Link rapidi</h5>
                         <ul className='list-unstyled'>
+                            <li ><Link className='text-white' to={'/projects'}>I miei progetti</Link></li>   
                             <li>Formazione</li>
-                            <li>Esperienze</li>
-                            <li>I miei progetti</li>                            
+                            <li>Esperienze</li>                            
+                                                     
                         </ul>
                     </div>
                     <div className="col-4">
