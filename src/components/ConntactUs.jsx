@@ -1,11 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 export const ContactUs = () => {
   const form = useRef();
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true); // Mostra il loader
 
     const userData = {
       user_name: e.target.user_name.value,
@@ -24,10 +26,12 @@ export const ContactUs = () => {
           console.log('Email inviata con successo:', result.text);
           alert('Email inviata con successo!');
           form.current.reset(); // Resetta il modulo dopo l'invio
+          setIsLoading(false); // Nasconde il loader
         },
         (error) => {
           console.log('Errore nell\'invio dell\'email:', error.text);
           alert('Si è verificato un errore nell\'invio dell\'email.');
+          setIsLoading(false); // Nasconde il loader anche in caso di errore
         }
       );
   };
@@ -69,11 +73,37 @@ export const ContactUs = () => {
                 <label htmlFor="message" className="form-label">Messaggio</label>
                 <textarea className="form-control" id="message" name="message" rows="4" required></textarea>
               </div>
-              <button type="submit" className="btn btn-primary">Invia</button>
+
+              <div>
+              {isLoading ? (
+                  <div className="loader"></div>
+                ) : (
+                  <button type="submit" className="btn btn-primary" disabled={isLoading}>Invia</button>
+                )}
+              </div>
             </form>
           </div>
         </div>
       </div>
+      {/* CSS del loader */}
+      <style>
+      {`
+          .loader {            
+            transform: translate(-50%, -50%);
+            border: 10px solid #f3f3f3; /* Light grey */
+            border-top: 10px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+            animation: spin 2s linear infinite;
+          }
+
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}
+      </style>
     </div>
   );
 };
