@@ -17,19 +17,18 @@ import { GlobalProvider } from './GlobalProvider';
 
 function App() {
   return (
-    <GlobalProvider>
-      <div>
-        <Navbar />
-        <Jumbo /> 
-        <Force/>
-        <Presentation/>
-        <Technologies/>
-        <Experiences/>
-        <Projects/>
-        <ContactUs/>
-        <Footer/>
-      </div>
-    </GlobalProvider>
+    <>
+      <Navbar />
+      <Jumbo />
+      <Force />
+      <Presentation />
+      <Technologies />
+      <Experiences />
+      <Projects />
+      <ContactUs />
+      <Footer />
+    </>
+
   );
 }
 

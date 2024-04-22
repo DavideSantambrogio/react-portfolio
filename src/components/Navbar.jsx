@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom"
+
 
 function Navbar() {
-
-
     return (
         <>
 
@@ -11,6 +11,8 @@ function Navbar() {
                     
                     <div className="" id="navbarNavAltMarkup">
                         <div className="navbar-nav gap-5">
+                            <Link className="nav-link text-light" to={'/'}>Home</Link>
+                            <Link className="nav-link text-light" to={'/projects'}>Progetti</Link>
                             <a className="nav-link text-light" aria-current="page" href="#">Chi sono</a>
                             <a className="nav-link text-light" href="#">Features</a>
                             <a className="nav-link text-light" href="#">Pricing</a>
