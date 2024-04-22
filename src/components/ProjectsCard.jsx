@@ -3,7 +3,7 @@ import React from 'react';
 function ProjectsCard({ name, htmlUrl, languages, image, description }) {
   return (
     <div className="card h-100 my-bg-primary">
-      <h5 class="card-header card-title">{name}</h5>
+      <h5 className="card-header card-title">{name}</h5>
       <div className='ratio ratio-16x9'>
         <img src={image} className="object-fit-cover " alt={name} style={{ objectPosition: 'top' }} />
       </div>

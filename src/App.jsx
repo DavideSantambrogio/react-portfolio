@@ -8,7 +8,7 @@ import Technologies from './components/Technologies';
 import Presentation from './components/Presentation';
 import Experiences from './components/Experiences';
 import Projects from './components/Projects';
-import Contact from './components/Conntact';
+import ContactUs from './components/ConntactUs';
 import Footer from './components/Footer';
 import { GlobalProvider } from './GlobalProvider';
 
@@ -26,7 +26,7 @@ function App() {
         <Technologies/>
         <Experiences/>
         <Projects/>
-        <Contact/>
+        <ContactUs/>
         <Footer/>
       </div>
     </GlobalProvider>
