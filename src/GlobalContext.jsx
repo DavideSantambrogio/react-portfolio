@@ -3,12 +3,16 @@ import axios from 'axios';
 import fetchGitHubRepos from './slices/fetchGitHubRepos';
 import fetchRepoLanguages from './slices/fetchRepoLanguages';
 import TechnologiesData from './slices/TechnologiesData';
+import fetchLinkedInEducation from './slices/fetchLinkedInEducation';
+import fetchLinkedInPositions from './slices/fetchLinkedInPositions';
 
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [technologies] = useState(TechnologiesData);
   const [githubRepos, setGithubRepos] = useState([]);
+  const [positions, setPositions] = useState([]);
+  const [education, setEducation] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -22,16 +26,16 @@ export const GlobalProvider = ({ children }) => {
     }
   }, [githubRepos]);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+  useEffect(() => {
+    fetchLinkedInPositions(setPositions, setLoading, setError);
+  }, []);
 
-  if (error) {
-    return <p>{error}</p>;
-  }
+  useEffect(() => {
+    fetchLinkedInEducation(setEducation, setLoading, setError);
+  }, []);
 
   return (
-    <GlobalContext.Provider value={{ technologies, githubRepos }}>
+    <GlobalContext.Provider value={{ technologies, githubRepos, positions, education, loading, error }}>
       {children}
     </GlobalContext.Provider>
   );
