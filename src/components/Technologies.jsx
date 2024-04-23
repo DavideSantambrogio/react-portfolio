@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'; // Import useEffect
-import { useGlobalContext } from '../GlobalProvider';
+import { useGlobalContext } from '../GlobalContext';
 import styles from './style/Slider.module.css'; // Import the CSS module
 
 const LogosSlider = () => {

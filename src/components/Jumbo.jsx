@@ -1,5 +1,5 @@
 import React from 'react';
-import { useGlobalContext } from '../GlobalProvider';
+import { useGlobalContext } from '../GlobalContext';
 
 function Jumbo() {
     const { technologies, githubRepos } = useGlobalContext(); // Ottieni le tecnologie dallo store globale

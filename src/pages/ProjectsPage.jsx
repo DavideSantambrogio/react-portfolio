@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useGlobalContext } from '../GlobalProvider';
+import { useGlobalContext } from '../GlobalContext';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ProjectsCard from '../components/ProjectsCard';

@@ -10,7 +10,7 @@ import Experiences from './components/Experiences';
 import Projects from './components/Projects';
 import ContactUs from './components/ConntactUs';
 import Footer from './components/Footer';
-import { GlobalProvider } from './GlobalProvider';
+
 
 
 
