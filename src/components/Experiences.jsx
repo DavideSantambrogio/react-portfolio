@@ -53,7 +53,7 @@ function Experiences() {
 
                             )}
                         </div>
-                        <div className="col-5 border border-2 border-secondary rounded p-5 my-bg-secondary">
+                        <div className="col-5 border border-2 border-secondary rounded p-5 my-bg-secondary h-100">
                             <h5 className='mb-5 text-center my-text-color'>ESPERIENZE</h5>
                             <ul>
                                 {positions.slice(0, visiblePositions).map((position, index) => (
