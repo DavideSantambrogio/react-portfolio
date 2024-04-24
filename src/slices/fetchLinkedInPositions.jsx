@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { LINKEDIN_ACCESS_TOKEN } from '../config';
+import { replaceWords, replacements } from '../replace';
 
 const fetchLinkedInPositions = async (setPositions, setLoading, setError) => {
     try {
@@ -9,7 +10,15 @@ const fetchLinkedInPositions = async (setPositions, setLoading, setError) => {
                 'LinkedIn-Version': '202312'
             }
         });
-        setPositions(response.data.elements[0].snapshotData);
+
+        // Correzione delle parole
+        const correctedData = response.data.elements[0].snapshotData.map(position => ({
+            ...position,
+            Title: replaceWords(position.Title, replacements),
+            Description: replaceWords(position.Description, replacements)
+        }));
+
+        setPositions(correctedData);
     } catch (error) {
         setError('Errore nella chiamata API di LinkedIn per le posizioni lavorative.');
     } finally {

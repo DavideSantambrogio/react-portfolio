@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { LINKEDIN_ACCESS_TOKEN } from '../config';
+import { replaceWords, replacements } from '../replace';
 
 const fetchLinkedInEducation = async (setEducation, setLoading, setError) => {
     try {
@@ -9,12 +10,20 @@ const fetchLinkedInEducation = async (setEducation, setLoading, setError) => {
                 'LinkedIn-Version': '202312'
             }
         });
-        setEducation(response.data.elements[0].snapshotData);
+
+        // Correzione delle parole
+        const correctedData = response.data.elements[0].snapshotData.map(edu => ({
+            ...edu,
+            Notes: replaceWords(edu.Notes, replacements)
+        }));
+
+        setEducation(correctedData);
     } catch (error) {
         setError('Errore nella chiamata API di LinkedIn per l\'istruzione.');
     } finally {
         setLoading(false);
     }
 };
+
 
 export default fetchLinkedInEducation;
