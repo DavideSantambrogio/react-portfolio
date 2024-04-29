@@ -40,7 +40,8 @@ export const ContactUs = () => {
     <div id='contactUs' className="my-bg-primary">
       <div className="container pb-5 pt-5">
         <div className="row">
-          <div className="col-5 my-bg-secondary p-5 text-white">
+          {/* Colonna sinistra (contatti) */}
+          <div className="col-lg-5 my-bg-secondary p-5 text-white">
             <h2 className='pb-4'>Vuoi contattarmi?</h2>
             <h5 className='pb-4'>Ecco i miei recapiti</h5>
             <div className='pb-4'>
@@ -52,7 +53,8 @@ export const ContactUs = () => {
               <p className="my-text-color text-decoration-underline">santambrogio.davide.97@gmail.com</p>
             </div>
           </div>
-          <div className="col-7 bg-light p-5">
+          {/* Colonna destra (modulo di contatto) */}
+          <div className="col-lg-7 bg-light p-5">
             <h2 className="pb-4">Inviami un messaggio</h2>
             <form ref={form} onSubmit={sendEmail}>
               <div className='d-flex gap-4'>
@@ -75,7 +77,8 @@ export const ContactUs = () => {
               </div>
 
               <div>
-              {isLoading ? (
+                {/* Mostra il loader durante l'invio dell'email */}
+                {isLoading ? (
                   <div className="loader"></div>
                 ) : (
                   <button type="submit" className="btn btn-primary" disabled={isLoading}>Invia</button>
@@ -87,7 +90,7 @@ export const ContactUs = () => {
       </div>
       {/* CSS del loader */}
       <style>
-      {`
+        {`
           .loader {            
             transform: translate(-50%, -50%);
             border: 10px solid #f3f3f3; /* Light grey */
