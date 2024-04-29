@@ -1,7 +1,19 @@
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
+    const navigate = useNavigate();
+
+    const scrollToSection = (id) => {
+        navigate(`/#${id}`);
+        setTimeout(() => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 100);
+    };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark sticky-top pt-4 pb-3 ">
             <div className="container">
@@ -10,11 +22,11 @@ function Navbar() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav ms-auto">
-                        <Link className="nav-link" to={'/'}>Home</Link>
-                        <a className="nav-link" href="#about">Chi sono</a>
-                        <a className="nav-link" href="#background">Esperienze e Formazione</a>
-                        <Link className="nav-link" to={'/projects'}>Progetti</Link>
+                    <div className="navbar-nav ms-auto gap-3">
+                        <Link className="nav-link text-start" to={'/'}>Home</Link>
+                        <button className="nav-link text-start" onClick={() => scrollToSection('about')}>Chi sono</button>
+                        <button className="nav-link text-start" onClick={() => scrollToSection('background')}>Esperienze e Formazione</button>
+                        <Link className="nav-link text-start" to={'/projects'}>Progetti</Link>
                     </div>
                 </div>
             </div>
