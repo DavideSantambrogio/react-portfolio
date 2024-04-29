@@ -13,7 +13,7 @@ function Navbar() {
                     <div className="navbar-nav ms-auto">
                         <Link className="nav-link" to={'/'}>Home</Link>
                         <a className="nav-link" href="#about">Chi sono</a>
-                        <a className="nav-link" href="#backgroud">Esperienze e Formazione</a>
+                        <a className="nav-link" href="#background">Esperienze e Formazione</a>
                         <Link className="nav-link" to={'/projects'}>Progetti</Link>
                     </div>
                 </div>
