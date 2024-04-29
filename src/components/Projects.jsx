@@ -21,7 +21,7 @@ function Projects() {
         <h4 className='my-text-color pb-5'>ALCUNI DEI MIEI PROGETTI</h4>
         <div className="row mb-4 ">
           {sortedRepos.map(repo => (
-            <div className="col-4 mb-4" key={repo.name}>
+            <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={repo.name}>
               <ProjectsCard
                 name={repo.name}
                 htmlUrl={repo.html_url}

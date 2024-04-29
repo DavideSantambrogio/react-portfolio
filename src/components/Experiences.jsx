@@ -18,6 +18,7 @@ function Experiences() {
             <div className="container pb-5 pt-5">
                 <h4 id='background' className='my-text-color pb-5 text-center'>IL MIO BACKGROUND</h4>
                 <div className="row justify-content-center">
+                    
                     {/* Formazione */}
                     <div className="col-lg-5 col-md-6 mb-4">
                         <h4 className='mb-4 text-center my-text-color'>Formazione</h4>
@@ -40,6 +41,7 @@ function Experiences() {
                             ))}
                         </div>
                     </div>
+
                     {/* Esperienze */}
                     <div className="col-lg-5 col-md-6 mb-4">
                         <h4 className='mb-4 text-center my-text-color'>Esperienze</h4>
