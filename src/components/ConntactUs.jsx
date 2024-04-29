@@ -1,9 +1,13 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import Toastify from 'toastify-js';
+import 'toastify-js/src/toastify.css';
 
 export const ContactUs = () => {
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);
+
+  
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -24,13 +28,50 @@ export const ContactUs = () => {
       .then(
         (result) => {
           console.log('Email inviata con successo:', result.text);
-          alert('Email inviata con successo!');
+          Toastify({
+            text: 'Email inviata con successo!',
+            backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
+            close: true, // Abilita il pulsante di chiusura
+            duration: 5000, // Imposta la durata a -1 per rendere il toast persistente
+            gravity: 'center', // Posiziona il toast in alto
+            position: 'right', // Posiziona il toast a destra
+            stopOnFocus: true, // Interrompe la chiusura automatica quando il toast riceve il focus
+            style: {
+              // Personalizzazione dello stile del toast
+              marginTop:"5rem",
+              background: "rgba(255,255,255,0.8)", // Sfondo del toast
+              color: "#000", // Colore del testo del toast
+              fontSize: "16px", // Dimensione del testo del toast
+              padding: "20px", // Spaziatura interna del toast
+              boxShadow: "0px 10px 20px rgba(0,0,0,0.1)", // Ombra del toast
+              borderRadius: "10px", // Bordo arrotondato del toast
+            },
+          }).showToast();          
           form.current.reset(); // Resetta il modulo dopo l'invio
           setIsLoading(false); // Nasconde il loader
         },
         (error) => {
           console.log('Errore nell\'invio dell\'email:', error.text);
-          alert('Si è verificato un errore nell\'invio dell\'email.');
+          Toastify({
+            text: 'Si è verificato un errore nell\'invio dell\'email.',
+            backgroundColor: 'linear-gradient(to right, #ff416c, #ff4b2b)',
+            close: true, // Abilita il pulsante di chiusura
+            duration: 5000, // Imposta la durata a -1 per rendere il toast persistente
+            gravity: 'top', // Posiziona il toast in alto
+            position: 'right', // Posiziona il toast a destra
+            stopOnFocus: true, // Interrompe la chiusura automatica quando il toast riceve il focus
+            style: {
+              // Personalizzazione dello stile del toast
+              marginTop:"5rem",
+              background: "rgba(255,255,255,0.8)", // Sfondo del toast
+              color: "#000", // Colore del testo del toast
+              fontSize: "16px", // Dimensione del testo del toast
+              padding: "20px", // Spaziatura interna del toast
+              boxShadow: "0px 10px 20px rgba(0,0,0,0.1)", // Ombra del toast
+              borderRadius: "10px", // Bordo arrotondato del toast
+            },
+          }).showToast();
+          
           setIsLoading(false); // Nasconde il loader anche in caso di errore
         }
       );

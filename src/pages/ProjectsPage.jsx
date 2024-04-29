@@ -25,9 +25,9 @@ function ProjectsPage() {
     return (
         <>
             <Navbar />
-            
-                <div className="container pb-5 pt-5">
-                    <h4 className='my-text-color pb-5'>ALCUNI DEI MIEI PROGETTI</h4>
+            <div className="my-bg-primary">
+                <div className="container pb-5 pt-5 ">
+                    <h4 className=' pb-5'>ALCUNI DEI MIEI PROGETTI</h4>
                     <div className="row mb-4 ">
                         {sortedRepos.map(repo => (
                             <div className="col-lg-4 col-md-6 col-sm-12 mb-4" key={repo.name}>
@@ -42,7 +42,7 @@ function ProjectsPage() {
                         ))}
                     </div>
                 </div>
-
+</div>
             <Footer />
         </>
     )
