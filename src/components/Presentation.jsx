@@ -5,7 +5,7 @@ function Presentation() {
 
     return (
         <>
-            <div className="my-bg-primary">
+            <div id='about' className="my-bg-primary">
                 <div className="container pb-5 pt-5">
                     <h4 className='my-text-color pb-4'>UN PO' DI ME</h4>
                     

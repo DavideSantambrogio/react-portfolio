@@ -25,7 +25,7 @@ function ProjectsPage() {
     return (
         <>
             <Navbar />
-            <div className=" my-container">
+            
                 <div className="container pb-5 pt-5">
                     <h4 className='my-text-color pb-5'>ALCUNI DEI MIEI PROGETTI</h4>
                     <div className="row mb-4 ">
@@ -42,7 +42,7 @@ function ProjectsPage() {
                         ))}
                     </div>
                 </div>
-            </div>
+
             <Footer />
         </>
     )

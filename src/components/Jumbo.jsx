@@ -7,7 +7,7 @@ function Jumbo() {
     return (
         <>
             <div className="my-bg-primary">
-                <div className="container my-container px-5 pt-5">
+                <div className="container  px-5 pt-5">
                     <div className="row">
                         <div className="col-6 pb-5">
                             <h2>Ciao sono</h2>
