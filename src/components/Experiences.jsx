@@ -14,9 +14,9 @@ function Experiences() {
     }
 
     return (
-        <div className="my-bg-primary">
+        <div id='background' className="my-bg-primary">
             <div className="container pb-5 pt-5">
-                <h4 id='background' className='my-text-color pb-5 text-center'>IL MIO BACKGROUND</h4>
+                <h4 className='my-text-color pb-5 text-center'>IL MIO BACKGROUND</h4>
                 <div className="row justify-content-center">
                     
                     {/* Formazione */}

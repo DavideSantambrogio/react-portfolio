@@ -2,9 +2,21 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faSquareGithub } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
 function Footer() {
+    const navigate = useNavigate();
+
+    const scrollToSection = (id) => {
+        navigate(`/#${id}`);
+        setTimeout(() => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 100);
+    };
+
     return (
         <div className="my-bg-secondary">
             <div className="container pb-5 pt-5 text-white">
@@ -32,8 +44,10 @@ function Footer() {
                         <h5 className='pb-2'>Link rapidi</h5>
                         <ul className='list-unstyled'>
                             <li><Link className='text-white' to={'/projects'}>I miei progetti</Link></li>
-                            <li>Formazione</li>
-                            <li>Esperienze</li>
+                            <li><button className="nav-link text-decoration-underline" onClick={() => scrollToSection('background')}>Esperienze</button></li>
+                            <li><button className="nav-link text-decoration-underline" onClick={() => scrollToSection('background')}>Formazione</button></li>
+                            
+                            
                         </ul>
                     </div>
                     {/* Colonna collaborazione */}
