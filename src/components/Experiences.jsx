@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { useGlobalContext } from '../GlobalContext';
-import { replaceWords, replacements } from '../replace';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
+import React from 'react';
+import { useGlobalContext } from '../GlobalContext';
+import { replaceWords, replacements } from '../replace';
+
 function Experiences() {
-    const { loading, error, positions, education } = useGlobalContext();
+    const { loading, positions, education } = useGlobalContext();
     const correctText = (text) => replaceWords(text, replacements);
 
     if (loading) {
@@ -16,8 +17,9 @@ function Experiences() {
         <div className="my-bg-primary">
             <div className="container pb-5 pt-5">
                 <h4 id='background' className='my-text-color pb-5 text-center'>IL MIO BACKGROUND</h4>
-                <div className="row justify-content-around">
-                    <div className="col-md-5">
+                <div className="row justify-content-center">
+                    {/* Formazione */}
+                    <div className="col-lg-5 col-md-6 mb-4">
                         <h4 className='mb-4 text-center my-text-color'>Formazione</h4>
                         <div className="accordion" id="accordionEducation">
                             {education.map((edu, index) => (
@@ -38,8 +40,8 @@ function Experiences() {
                             ))}
                         </div>
                     </div>
-
-                    <div className="col-md-5">
+                    {/* Esperienze */}
+                    <div className="col-lg-5 col-md-6 mb-4">
                         <h4 className='mb-4 text-center my-text-color'>Esperienze</h4>
                         <div className="accordion" id="accordionExperiences">
                             {positions.map((position, index) => (
