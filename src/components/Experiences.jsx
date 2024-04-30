@@ -1,13 +1,26 @@
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useGlobalContext } from '../GlobalContext';
 import { replaceWords, replacements } from '../replace';
 
+
 function Experiences() {
-    const { loading, positions, education } = useGlobalContext();
+    const { loading, positions, education, error } = useGlobalContext();
+    const [errorMessage, setErrorMessage] = useState(null);
     const correctText = (text) => replaceWords(text, replacements);
+
+    useEffect(() => {
+        if (error) {
+            setErrorMessage(error);
+        }
+    }, [error]);
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    const handleFetchError = (errorMessage) => {
+        setError(errorMessage);
+    };
 
     if (loading) {
         return <p>Loading...</p>;
@@ -17,11 +30,19 @@ function Experiences() {
         <div id='background' className="my-bg-primary">
             <div className="container pb-5 pt-5">
                 <h4 className='my-text-color pb-5 text-center'>IL MIO BACKGROUND</h4>
+
+
                 <div className="row justify-content-center">
-                    
                     {/* Formazione */}
                     <div className="col-lg-5 col-md-6 mb-4">
                         <h4 className='mb-4 text-center my-text-color'>Formazione</h4>
+
+                        {error && (
+                            <div className="alert alert-danger" role="alert">
+                                {error}  <a href="https://www.linkedin.com/in/davide-santambrogio-97b1392b2/details/education/">Guarda qui</a>
+                            </div>
+                        )}
+
                         <div className="accordion" id="accordionEducation">
                             {education.map((edu, index) => (
                                 <div key={index} className="accordion-item">
@@ -45,6 +66,11 @@ function Experiences() {
                     {/* Esperienze */}
                     <div className="col-lg-5 col-md-6 mb-4">
                         <h4 className='mb-4 text-center my-text-color'>Esperienze</h4>
+                        {error && (
+                            <div className="alert alert-danger" role="alert">
+                                {error} <a href="https://www.linkedin.com/in/davide-santambrogio-97b1392b2/details/experience/">Guarda qui</a>
+                            </div>
+                        )}
                         <div className="accordion" id="accordionExperiences">
                             {positions.map((position, index) => (
                                 <div key={index} className="accordion-item">

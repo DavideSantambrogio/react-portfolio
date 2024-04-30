@@ -19,11 +19,10 @@ const fetchLinkedInEducation = async (setEducation, setLoading, setError) => {
 
         setEducation(correctedData);
     } catch (error) {
-        setError('Errore nella chiamata API di LinkedIn per l\'istruzione.');
+        setError('Errore nel recupero dei dati da Linkedin');
     } finally {
         setLoading(false);
     }
 };
-
 
 export default fetchLinkedInEducation;

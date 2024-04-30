@@ -20,7 +20,7 @@ const fetchLinkedInPositions = async (setPositions, setLoading, setError) => {
 
         setPositions(correctedData);
     } catch (error) {
-        setError('Errore nella chiamata API di LinkedIn per le posizioni lavorative.');
+        setError('Errore nel recupero dei dati da Linkedin');
     } finally {
         setLoading(false);
     }
