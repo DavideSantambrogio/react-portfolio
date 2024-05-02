@@ -21,7 +21,7 @@ function Presentation() {
 
                         <div className="col-12 col-md-6 mt-auto">
                             {/* Imposta l'immagine con la classe img-fluid per renderla responsive */}
-                            <img className="img-fluid d-md-block d-none  " src="src\assets\img\pc.png" alt="" />
+                            <img className="img-fluid d-md-block d-none  " src="\img\pc.png" alt="" />
                         </div>
                     </div>
                 </div>

@@ -39,7 +39,7 @@ function Jumbo() {
                         
                         {/* Colonna destra - Immagine (mostrata solo su schermi grandi) */}
                         <div className='col-lg-6 d-none d-lg-block'>
-                            <img src="src\assets\img\file__1_-removebg-preview.png" alt="" />
+                            <img src="\img\file__1_-removebg-preview.png" alt="" />
                         </div>
                     </div>
                 </div>

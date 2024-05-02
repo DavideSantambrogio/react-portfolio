@@ -26,7 +26,7 @@ function Projects() {
                 name={repo.name}
                 htmlUrl={repo.html_url}
                 languages={repo.languages || []} 
-                image={`./src/assets/img/projectImg/${repo.name}.png`}
+                image={`/img/projectImg/${repo.name}.png`}
                 description={repo.description}
               />
             </div>

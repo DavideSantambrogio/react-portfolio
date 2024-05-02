@@ -17,7 +17,7 @@ const LogosSlider = () => {
                 <div className={styles.logos}>
                     <div className={styles.logosSlide}>
                         {technologies.map((tech, index) => (
-                            <img key={index} src={`src/assets/img/technologies/${tech.image}`} alt={tech.name} className={styles.logosImage} />
+                            <img key={index} src={`img/technologies/${tech.image}`} alt={tech.name} className={styles.logosImage} />
                         ))}
                     </div>
                 </div>
