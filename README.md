@@ -29,6 +29,3 @@ Il progetto è organizzato in diverse cartelle:
 
 - **Davide Santambrogio** - [GitHub](https://github.com/DavideSantambrogio)
 
-## Licenza
-
-Questo progetto è concesso in licenza secondo i termini della licenza MIT. Consulta il file [LICENSE](LICENSE) per ulteriori informazioni.
