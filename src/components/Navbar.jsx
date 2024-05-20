@@ -24,8 +24,7 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto gap-3">
                         <Link className="nav-link text-start" to={'/'}>Home</Link>
-                        <button className="nav-link text-start" onClick={() => scrollToSection('about')}>Chi sono</button>
-                        <button className="nav-link text-start" onClick={() => scrollToSection('background')}>Esperienze e Formazione</button>
+                        <Link className="nav-link text-start" to={'/technologies'}>Tecnologie</Link>
                         <Link className="nav-link text-start" to={'/projects'}>Progetti</Link>
                     </div>
                 </div>
