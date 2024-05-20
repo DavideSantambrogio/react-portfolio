@@ -42,6 +42,10 @@ const TechnologiesData = [
       {
         name: 'React',
         image: 'react-image.png'
+      },
+      {
+        name: 'ExpessJS',
+        image: 'expressJS-image.png'
       }
   ];
   
